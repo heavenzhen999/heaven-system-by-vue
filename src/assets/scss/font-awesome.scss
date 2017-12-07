@@ -1,0 +1,20 @@
+/*
+ * @Author: zhen chen
+ * @Date: 2017-10-16 14:32:11
+ * @description 用来将font-awesome集成进element-ui的文件
+ */
+
+[class^="el-icon-fa"], [class*=" el-icon-fa"] {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome!important;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+};
+[class^="el-icon-fa"]:before{
+  font-size: initial;
+}
+$fa-css-prefix: el-icon-fa;
+$fa-font-path: '../../../node_modules/font-awesome/fonts/';
+@import "../../../node_modules/font-awesome/scss/font-awesome.scss";

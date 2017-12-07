@@ -1,0 +1,16 @@
+@charset "utf-8";
+/*
+ * @Author: zhen chen
+ * @Date: 2017-10-24 16:45:03
+ * @Last Modified by: zhen chen
+ * @Last Modified time: 2017-10-24 16:45:03
+ * @description 
+ */
+
+body {
+  position: absolute;
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,35 @@
+/*
+ * @Author: zhen chen
+ * @Date: 2017-07-31 17:59:00
+ * @Last Modified by: zhen chen
+ * @Last Modified time: 2017-10-24 11:47:29
+ * @description 对系统颜色的统一变量，，便于统一管理风格以及颜色
+ */
+
+$themeColor: #000;
+$themeTextColor: #daf6ff;
+
+.background-dark{
+  background: #0e1620;
+  background: -webkit-radial-gradient(center ellipse, #15596c 0%, rgba(14, 22, 32, 0.28) 70%);
+  background: radial-gradient(ellipse at center, #15596c 0%, rgba(14, 22, 32, 0.28) 70%);
+  background-size: 100%;
+}
+
+.module-line{
+  border-radius: 2px;
+  border: 2px solid #06576d;
+}
+.active-text{
+  color: $themeTextColor;
+}
+.highlight-text{
+  color: $themeTextColor;
+  text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
+}
+.page-background{
+  // background: #0f3854;
+  // background: -webkit-radial-gradient(center ellipse, #0a2e38 0%, #000000 70%);
+  // background: radial-gradient(ellipse at center, #0a2e38 0%, #000000 70%);
+  @extend .background-dark;
+}
