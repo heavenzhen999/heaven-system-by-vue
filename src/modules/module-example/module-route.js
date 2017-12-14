@@ -2,7 +2,7 @@
  * @Author: zhen chen
  * @Date: 2017-10-16 22:52:05
  * @Last Modified by: zhen chen
- * @Last Modified time: 2017-12-07 15:13:34
+ * @Last Modified time: 2017-12-14 16:10:43
  * @description "实例"模块内部个模块注册文件
  */
 
@@ -16,6 +16,12 @@ const modules = {
       name: 'Canvas',
       description: 'Canvas',
       children: [
+        {
+          name: 'ZrenderBlock',
+          path: 'ZrenderBlock',
+          description: 'Zrender时钟',
+          component: () => import(/* webpackChunkName: "CanvasWheel" */ './components/canvas/clock/index')
+        },
         {
           name: 'CanvasWheel',
           path: 'CanvasWheel',
@@ -70,10 +76,22 @@ const modules = {
       ]
     },
     {
-      name: 'Three.js',
-      description: 'Three.js',
-      children: []
+      name: 'Notification',
+      description: 'Notification',
+      children: [
+        {
+          name: 'Notification',
+          path: 'Notification',
+          description: 'Notification 桌面提示',
+          component: () => import(/* webpackChunkName: "Notification" */ './components/notification/index.vue')
+        }
+      ]
     },
+    // {
+    //   name: 'Three.js',
+    //   description: 'Three.js',
+    //   children: []
+    // },
     {
       name: 'SVG',
       description: 'SVG',
@@ -197,6 +215,12 @@ const modules = {
           path: 'BackgroundColor',
           description: '炫酷背景色',
           component: () => import(/* webpackChunkName: "BackgroundColor" */ './components/others/background-color/index.vue')
+        },
+        {
+          name: 'BackgroundUKFlag',
+          path: 'BackgroundUKFlag',
+          description: '纯CSS英国国旗',
+          component: () => import(/* webpackChunkName: "BackgroundColor" */ './components/others/background-uk-flag/index.vue')
         },
         {
           name: 'QRCode',

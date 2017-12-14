@@ -36,7 +36,8 @@
     "vue": "^2.5.2",
     "vue-image-crop-upload": "^2.1.3",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.0"
+    "vuex": "^3.0.0",
+    "zrender": "^3.7.4"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

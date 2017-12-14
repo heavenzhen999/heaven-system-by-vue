@@ -2,7 +2,7 @@
  * @Author: zhen chen
  * @Date: 2017-10-16 22:52:05
  * @Last Modified by: zhen chen
- * @Last Modified time: 2017-11-18 22:16:17
+ * @Last Modified time: 2017-12-08 18:07:07
  * @description "日常"模块内部个模块注册文件
  */
 
@@ -45,6 +45,18 @@ const modules = {
           path: 'CanvasImgMap',
           description: 'canvas转换成图片',
           component: () => import(/* webpackChunkName: "CanvasImgMap" */ './components/canvas-about/canvas-img-map/index.vue')
+        }
+      ]
+    },
+    {
+      name: 'ZRenderText',
+      description: 'ZRender练习',
+      children: [
+        {
+          name: 'ZRenderText1',
+          path: 'ZRenderText1',
+          description: 'ZRender练习1',
+          component: () => import(/* webpackChunkName: "ZRenderText" */ './components/zrender-text/index.vue')
         }
       ]
     }
