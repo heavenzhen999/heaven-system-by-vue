@@ -16,6 +16,7 @@
   "dependencies": {
     "@esri/arcgis-to-geojson-utils": "^1.0.4",
     "axios": "^0.16.2",
+    "codemirror": "^5.32.0",
     "dynamics.js": "^1.1.5",
     "echarts": "^3.7.2",
     "element-ui": "^1.4.7",

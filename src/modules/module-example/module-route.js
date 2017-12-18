@@ -2,7 +2,7 @@
  * @Author: zhen chen
  * @Date: 2017-10-16 22:52:05
  * @Last Modified by: zhen chen
- * @Last Modified time: 2017-12-14 16:10:43
+ * @Last Modified time: 2017-12-15 11:39:31
  * @description "实例"模块内部个模块注册文件
  */
 
@@ -210,6 +210,12 @@ const modules = {
       name: 'Others',
       description: '其他',
       children: [
+        {
+          name: 'CodeMirror',
+          path: 'CodeMirror',
+          description: '代码编辑器',
+          component: () => import(/* webpackChunkName: "CodeMirror" */ './components/others/code-mirror/index.vue')
+        },
         {
           name: 'BackgroundColor',
           path: 'BackgroundColor',
