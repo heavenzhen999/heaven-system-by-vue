@@ -2,7 +2,7 @@
  * @Author: zhen chen
  * @Date: 2017-10-16 22:52:05
  * @Last Modified by: zhen chen
- * @Last Modified time: 2017-12-15 11:39:31
+ * @Last Modified time: 2017-12-26 09:52:41
  * @description "实例"模块内部个模块注册文件
  */
 
@@ -221,6 +221,12 @@ const modules = {
           path: 'BackgroundColor',
           description: '炫酷背景色',
           component: () => import(/* webpackChunkName: "BackgroundColor" */ './components/others/background-color/index.vue')
+        },
+        {
+          name: 'BackgroundCSS3',
+          path: 'BackgroundCSS3',
+          description: 'CSS3效果',
+          component: () => import(/* webpackChunkName: "BackgroundCSS3" */ './components/others/background-css3/index.vue')
         },
         {
           name: 'BackgroundUKFlag',

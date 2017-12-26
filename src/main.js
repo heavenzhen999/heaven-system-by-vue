@@ -2,7 +2,7 @@
  * @Author: zhen chen
  * @Date: 2017-07-16 14:04:44
  * @Last Modified by: zhen chen
- * @Last Modified time: 2017-11-27 16:02:47
+ * @Last Modified time: 2017-12-25 17:07:26
  * @description 入口文件
  */
 
@@ -17,7 +17,6 @@ import router from './router'                                           // vue-r
 import store from './store'                                             // vuex
 import axios from '@/assets/js/vueAxios'
 import ElementUI from 'element-ui'                                      // 引入element-ui组件
-import ol from 'openlayers'                                             // 引入openlayers
 import page from './App'
 import '@/assets/plugins/jQuery/js/jquery-vendor'                       // 引入jquery
 import '@/assets/plugins/jsColor/jscolor.js'                            // 安装jsColor颜色选择器
@@ -28,7 +27,6 @@ ZeroClipboard.config({
 })
 Vue.use(ElementUI)                                                      // 安装组件
 Vue.use(axios)
-Vue.prototype.$ol = ol
 
 Vue.config.productionTip = false
 

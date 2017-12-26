@@ -26,6 +26,9 @@ module.exports = {
       '@': resolve('src')
     }
   },
+  externals:{
+    openlayers: 'ol'
+  },
   module: {
     rules: [
       {
