@@ -1,3 +1,12 @@
+/*
+ * @Author: zhen chen
+ * @Date: 2018-01-03 13:56:57
+ * @Last Modified by: zhen chen
+ * @Last Modified time: 2018-01-03 13:56:57
+ * @description 一个显示代码的库
+ */
+
+
 <template>
   <div class="module-code-mirror">
     <textarea class="code-textarea" ref="code-area" cols="30" rows="10" />

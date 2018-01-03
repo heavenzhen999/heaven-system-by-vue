@@ -132,6 +132,26 @@ export default {
      * 坐标数据转换(批量)
      */
     transformNumerous() {
+      switch (this.dataType) {
+        case DATATYPE[0].name:
+          let _numerousOut = JSON.parse(this.numerousIn).map((point) => {
+            let {lat, lon} = this.coordinateTranslate.translate({
+              lat: point[1],
+              lon: point[0],
+              coorIn: this.coorIn,
+              coorOut: this.coorOut
+            })
+            return [lon, lat]
+          })
+          this.numerousOut = JSON.stringify(_numerousOut)
+          break
+        case DATATYPE[1].name:
+          break
+        case DATATYPE[2].name:
+          break
+        default:
+          break
+      }
     },
     /**
      * 清空的当前输入数据

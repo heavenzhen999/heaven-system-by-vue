@@ -16,7 +16,8 @@ module.exports = {
     'html'
   ],
   globals: {
-    ZeroClipboard: true
+    ZeroClipboard: true,
+    particlesJS: true
   },
   // add your custom rules here
   rules: {

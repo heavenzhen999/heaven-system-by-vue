@@ -2,7 +2,7 @@
  * @Author: zhen chen
  * @Date: 2017-10-16 22:52:05
  * @Last Modified by: zhen chen
- * @Last Modified time: 2017-12-26 09:52:41
+ * @Last Modified time: 2018-01-03 17:29:07
  * @description "实例"模块内部个模块注册文件
  */
 
@@ -211,10 +211,40 @@ const modules = {
       description: '其他',
       children: [
         {
+          name: 'Flowchart',
+          path: 'Flowchart',
+          description: '流程图',
+          component: () => import(/* webpackChunkName: "Flowchart" */ './components/others/flowchart/index.vue')
+        },
+        {
+          name: 'MockaPlaceholder',
+          path: 'MockaPlaceholder',
+          description: '骨架Loading',
+          component: () => import(/* webpackChunkName: "MockaPlaceholder" */ './components/others/mocka/index.vue')
+        },
+        {
+          name: 'Flatpickr',
+          path: 'Flatpickr',
+          description: '时间选择器',
+          component: () => import(/* webpackChunkName: "Flatpickr" */ './components/others/flat-picker/index.vue')
+        },
+        {
+          name: 'particles.js',
+          path: 'ParticlesJs',
+          description: 'particles.js',
+          component: () => import(/* webpackChunkName: "ParticlesJs" */ './components/others/particles-js/index.vue')
+        },
+        {
           name: 'CodeMirror',
           path: 'CodeMirror',
-          description: '代码编辑器',
+          description: '高亮代码编辑器',
           component: () => import(/* webpackChunkName: "CodeMirror" */ './components/others/code-mirror/index.vue')
+        },
+        {
+          name: 'HighLightJs',
+          path: 'HighLightJs',
+          description: '高亮代码编辑器',
+          component: () => import(/* webpackChunkName: "CodeMirror" */ './components/others/highlight/index.vue')
         },
         {
           name: 'BackgroundColor',
@@ -247,10 +277,16 @@ const modules = {
           component: () => import(/* webpackChunkName: "VerticalCenter" */ './components/others/vertical-center/index.vue')
         },
         {
+          name: 'CopyToShearPlateOld',
+          path: 'CopyToShearPlateOld',
+          description: '复制到剪切板（旧）',
+          component: () => import(/* webpackChunkName: "CopyToShearPlateOld" */ './components/others/copy-to-shear-plate-old/index.vue')
+        },
+        {
           name: 'CopyToShearPlate',
           path: 'CopyToShearPlate',
           description: '复制到剪切板',
-          component: () => import(/* webpackChunkName: "VerticalCenter" */ './components/others/copy-to-shear-plate/index.vue')
+          component: () => import(/* webpackChunkName: "CopyToShearPlate" */ './components/others/copy-to-shear-plate/index.vue')
         }
       ]
     }
