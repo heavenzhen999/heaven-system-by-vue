@@ -2,7 +2,7 @@
  * @Author: zhen chen 
  * @Date: 2017-08-05 00:57:53 
  * @Last Modified by: zhen chen
- * @Last Modified time: 2017-11-28 18:32:34
+ * @Last Modified time: 2018-01-18 09:46:27
  * @description 整个主Vue
  */
  
@@ -58,6 +58,12 @@ export default {
   },
   mounted() {
     this.resizeModuleContainHeight()
+    // 测试接口是否正常
+    this.$axios.get('/express/users/').then((res) => {
+      console.log(res)
+    }).catch((err) => {
+      if (err) console.log(err)
+    })
   },
   methods: {
     resizeModuleContainHeight() {

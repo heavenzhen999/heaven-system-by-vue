@@ -9,13 +9,13 @@
 <template>
   <div class="module-highlinght">
     <pre>
-      <code class="html">
+      <code class="lang-html">
         &lt;button&gt;
         &lt;/button&gt;
       </code>
     </pre>
     <pre>
-      <code class="javascript">
+      <code class="lang-javascript">
         var a = new Code();
       </code>
     </pre>
@@ -23,7 +23,8 @@
 </template>
 
 <script>
-import 'highlight.js/styles/default.css'
+// import 'highlight.js/styles/default.css'
+import 'highlight.js/styles/tomorrow-night.css'
 import highlinght from 'highlight.js'
 export default {
   data() {

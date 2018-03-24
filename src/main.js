@@ -2,7 +2,7 @@
  * @Author: zhen chen
  * @Date: 2017-07-16 14:04:44
  * @Last Modified by: zhen chen
- * @Last Modified time: 2017-12-25 17:07:26
+ * @Last Modified time: 2018-01-15 22:12:20
  * @description 入口文件
  */
 
@@ -20,7 +20,7 @@ import ElementUI from 'element-ui'                                      // 引�
 import page from './App'
 import '@/assets/plugins/jQuery/js/jquery-vendor'                       // 引入jquery
 import '@/assets/plugins/jsColor/jscolor.js'                            // 安装jsColor颜色选择器
-import '../mock/index.js'                                               // 引入mock
+// import '../mock/index.js'                                               // 引入mock
 import '@/assets/plugins/ZeroClipboard/ZeroClipboard.min.js'
 ZeroClipboard.config({
   swfPath: './static/ZeroClipboard.swf'

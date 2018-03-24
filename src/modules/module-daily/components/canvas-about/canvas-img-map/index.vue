@@ -2,7 +2,7 @@
  * @Author: zhen chen
  * @Date: 2017-11-15 11:51:17
  * @Last Modified by: zhen chen
- * @Last Modified time: 2017-11-15 23:19:43
+ * @Last Modified time: 2018-01-18 09:56:43
  * @description 读取geojson文件，并将其绘制到canvas上，同时生成图片信息传输到后台并进行保存
  */
 
@@ -18,7 +18,7 @@ export default {
     return {
       canvasHeight: 180,                                                      // canvas高度
       canvasWidth: 360,                                                       // canvas宽度
-      factor: 50,                                                             // 放大因数
+      factor: 1,                                                             // 放大因数
       canvasDom: null,
       canvasContext: null
     }
@@ -99,7 +99,7 @@ export default {
      */
     upData() {
       let imgData = this.canvasDom.toDataURL('image/jpeg', 1.0)
-      this.$axios.post('/express/daily/saveMapImg/save', {params: {data: imgData, type: 'jpeg'}}).then((res) => {
+      this.$axios.post('/express/save/image', {params: {data: imgData, fileName: 'vue-text', type: 'jpg'}}).then((res) => {
         console.log(res)
       }).catch((err) => {
         console.log(err)

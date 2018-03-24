@@ -34,7 +34,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/express': {
-        target: 'http://localhost:8094',
+        target: 'http://localhost:8090',
         changeOrigin: true,
         pathRewrite: {
           '^/express': ''
