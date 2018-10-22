@@ -1,9 +1,17 @@
 /*
- * @Author: zhen chen
- * @Date: 2017-10-17 13:50:22
- * @Last Modified by: zhen chen
- * @Last Modified time: 2017-10-17 13:50:22
- * @description 定义mutations的名称，为了统一管理，不至于使用是出现单词拼写错误，重复等问题
+ * @Author: Piscs.z
+ * @Date: 2018-03-27 15:07:34
+ * @Last Modified by: chen zhen
+ * @Last Modified time: 2018-09-20 14:05:01
+ * @description 状态管理 修改状态 的types 收集
+ *              防止命名冲突
+ *
+ * // 示例
+ * export const SET_TESTDATA = 'SAVE_TESTDATA'
  */
 
-// export const SAVE_MONITOR_TREE = 'SAVE_MONITOR_TREE'
+export const CHANGE_MODULE_TYPE = 'CHANGE_MODULE_TYPE'
+
+export const CHANGE_CURRENT_SUBNAV = 'CHANGE_CURRENT_SUBNAV'
+
+export const CHANGE_USER_INFO = 'CHANGE_USER_INFO'

@@ -1,100 +1,86 @@
 /*
- * @Author: zhen chen 
- * @Date: 2017-08-05 00:57:53 
- * @Last Modified by: zhen chen
- * @Last Modified time: 2018-01-18 09:46:27
- * @description 整个主Vue
+ * @Author: chen zhen
+ * @Date: 2018-06-07 17:49:45
+ * @Last Modified by: chen zhen
+ * @Last Modified time: 2018-09-20 14:08:59
+ * @Description: 入口
  */
- 
+
 <template>
-  <div class="page">
-    <!-- 为了处理display：inline-block;中间有空格的问题 -->
-    <sidebar-left></sidebar-left><!--
-    --><page-main></page-main><!--
-    --><sidebar-right></sidebar-right>
-    <home-button v-show="isShowHomeButton"></home-button>
+  <div class="app">
+    <g-login v-if="userInfo === null"></g-login>
+    <template v-if="userInfo !== null" >
+      <m-logo class="app__logo"></m-logo>
+      <g-header class="app__header"></g-header>
+      <g-menu class="app__menu"></g-menu>
+      <g-container class="app__container"></g-container>
+      <!-- //TODO 添加一个 sidebar -->
+      <g-footer class="app__footer"></g-footer>
+    </template>
   </div>
 </template>
 
 <script>
-import SidebarLeft from '@/common/page/sidebar-left'
-import SidebarRight from '@/common/page/sidebar-right'
-import PageMain from '@/common/page/page-main'
-import HomeButton from '@/common/page/home-button.vue'
-import dynamics from 'dynamics.js'
+import GLogin from 'components/g-login'
+import MLogo from 'components/m-logo'
+import GHeader from 'components/g-header'
+import GFooter from 'components/g-footer'
+import GMenu from 'components/g-menu'
+import GContainer from 'components/g-container'
+
+import { mapGetters } from 'vuex'
+
 export default {
   data() {
-    return {
-      contain: null,
-      moduleContainHeight: 0,
-      isShowHomeButton: false
-    }
+    return {}
   },
-  beforeCreate() {
-    // 修改body的宽度
-    document.body.style.width = (window.innerWidth - 20) + 'px'
-    document.body.style.minHeight = window.innerHeight + 'px'
+  computed: {
+    ...mapGetters([
+      'userInfo'
+    ])
   },
-  watch: {
-    $route() {
-      this.resizeModuleContainHeight()
-    },
-    moduleContainHeight(newVal) {
-      let marginTop = (window.innerHeight - newVal) / 2
-      // 跟据marginTop来确定是否显示按钮
-      if (marginTop < 0) {
-        marginTop = 0
-        this.isShowHomeButton = true
-      } else {
-        this.isShowHomeButton = false
-      }
-      dynamics.animate(this.contain, {
-        marginTop: marginTop * 0.8
-      }, {
-        type: dynamics.easeOut,
-        duration: 700
-      })
-    }
-  },
-  mounted() {
-    this.resizeModuleContainHeight()
-    // 测试接口是否正常
-    this.$axios.get('/express/users/').then((res) => {
-      console.log(res)
-    }).catch((err) => {
-      if (err) console.log(err)
-    })
-  },
-  methods: {
-    resizeModuleContainHeight() {
-      this.$nextTick(() => {
-        this.contain = document.getElementsByClassName('module-contain')[0]
-        if (this.contain !== undefined) {
-          this.moduleContainHeight = this.contain.offsetHeight
-        }
-      })
-    }
-  },
+  created() {},
+  mounted() {},
+  methods: {},
   components: {
-    SidebarLeft,
-    SidebarRight,
-    PageMain,
-    HomeButton
+    GLogin,
+    MLogo,
+    GHeader,
+    GFooter,
+    GMenu,
+    GContainer
   }
 }
 </script>
 
 <style lang="scss">
-@import './assets/scss/color.scss';
-body{
-  background: rgb(14, 22, 32);
-}
-.page {
-  position: relative;
-  overflow: hidden;
+
+.app{
+  position: absolute;
+  min-height: 100%;
   width: 100%;
-  min-height: inherit;
-  color: $themeTextColor;
-  @extend .page-background;
+  display: grid;
+  grid-template-columns: $menuWidth auto;
+  grid-template-rows: $headerHeight auto $footerheight;
+  grid-template-areas: "logo header"
+                       "menu container"
+                       "footer footer";
+  grid-gap: 8px 6px;
+  background-color: $backgroundColor;
+}
+.app__logo{
+  grid-area: logo;
+}
+.app__header{
+  grid-area: header;
+}
+.app__menu{
+  grid-area: menu;
+}
+.app__container{
+  grid-area: container;
+}
+.app__footer{
+  grid-area: footer;
 }
 </style>

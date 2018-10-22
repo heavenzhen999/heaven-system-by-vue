@@ -1,0 +1,27 @@
+/*
+ * @Author: chen zhen
+ * @Date: 2018-09-13 11:16:48
+ * @Last Modified by: chen zhen
+ * @Last Modified time: 2018-09-13 11:16:48s
+ * @Description 常量
+ */
+
+@mixin background-dark{
+  background: #0e1620;
+  background: -webkit-radial-gradient(center ellipse, #15596c 0%, rgba(14, 22, 32, 0.28) 70%);
+  background: radial-gradient(ellipse at center, #15596c 0%, rgba(14, 22, 32, 0.28) 70%);
+}
+
+@mixin  background-transparent{
+  background: transparent;
+}
+
+@mixin font-color-active{
+  color: $activeFontColor;
+  font-weight: bold;
+}
+
+@mixin in-module-size{
+  width: 800px;
+  height: 600px;
+}

@@ -1,0 +1,16 @@
+/*
+ * @Author: chen zhen
+ * @Date: 2018-09-13 11:08:43
+ * @Last Modified by: chen zhen
+ * @Last Modified time: 2018-09-13 11:08:43s
+ * @Description 页面统一样式
+ */
+
+/* body的具体样式在App内部 */
+body {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: $fontColor;
+}
